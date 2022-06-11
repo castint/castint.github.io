@@ -1,22 +1,13 @@
 <script setup lang="ts">
 
-    import { reactive } from 'vue';
-
-    const model = reactive({
-        val: 0
-    });
-
-    function changeValue()
-    {
-        model.val++;
-    }
+    import store from '@/stores/state';
 
 </script>
 
 <template>
 
     <p>Welcome</p>
-    <button type="button" @click="changeValue">Update</button>
-    <p>{{model.val}}</p>
+    <button type="button" @click="store.increment">Update</button>
+    <p>{{store.state.counter}}</p>
 
 </template>
