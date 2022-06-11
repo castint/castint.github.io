@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue';
-import { createRouter, createWebHistory, RouteRecordRedirectOption } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import App from '@/components/App.vue';
 import Contact from '@/components/Contact.vue';
 import Home from '@/components/Home.vue';
@@ -7,7 +7,7 @@ import Home from '@/components/Home.vue';
 const app = createApp(App);
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         {
             path: '/home',
